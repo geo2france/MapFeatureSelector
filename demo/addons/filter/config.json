@@ -1,0 +1,119 @@
+{
+  "js": ["js/filter.js", "js/jquery.easyDrag.min.js"],
+  "css": "css/filter.css",
+  "html": "filter.html",
+  "target": "map",
+  "options": {
+    "mviewer":{
+      "monappli":{
+        "tooltipPosition": "bottom-right",
+        "title": "Filtrer",
+        "open": true,
+        "zoomOnFeatures": true,
+        "legendTitle": "Sélectionner une donnée :",
+        "style": {
+          "border": "1px #2e5367 solid",
+          "background": "#0f4496",
+          "text": "white",
+          "colorButton": "#0f4496"
+        },
+        "layers": [{
+          "layerId": "ZAE_P",
+		  
+          "filter": [{
+              "attribut": "dispo_fonc",
+              "type": "button",
+              "label": "Disponibilité"
+            },
+			{
+              "attribut": "epci",
+              "type": "combobox",
+              "label": "EPCI",
+			  "dataSeparator":";",
+              "updateOnChange": true
+            },
+            {
+              "attribut": "desserte",
+              "type": "button",
+              "label": "Desserte",
+              "updateOnChange": true
+            },
+			{
+              "attribut": "inf_fu_u",
+              "type": "button",
+              "label": "Usage de l'infrastructure de transbordement",
+              "updateOnChange": true
+            }
+          ]
+        }]
+      },
+	  "symsagel":{
+        "tooltipPosition": "bottom-right",
+        "title": "Filtrer",
+        "open": true,
+        "zoomOnFeatures": true,
+        "legendTitle": "Sélectionner une donnée :",
+        "style": {
+          "border": "1px #2e5367 solid",
+          "background": "#0f4496",
+          "text": "white",
+          "colorButton": "#0f4496"
+        },
+        "layers": [
+		{
+          "layerId": "etab_sco_symsagel",		   
+          "filter": [
+			{
+              "attribut": "school_FR",
+              "type": "button",
+              "label": "Type d'établissement",
+              "updateOnChange": true
+            }
+          ]
+        }
+		]
+      },
+	  "sinptestfilter":{
+        "tooltipPosition": "bottom-left",
+        "title": "Filtrer",
+        "open": true,
+        "zoomOnFeatures": true,
+        "legendTitle": "Sélectionner une donnée :",
+        "style": {
+          "border": "1px #2e5367 solid",
+          "background": "#2e5367",
+          "text": "white",
+          "colorButton": "#2e5367"
+        },
+        "layers": [{
+          "layerId": "occurence_public_filter",
+          "filter": [{
+              "attribut": "nom_valide",
+              "type": "combobox",
+              "label": "Taxons",
+			  "updateOnChange": true
+            },
+            {
+              "attribut": "menace_region",
+              "type": "combobox",
+              "label": "Menace région",
+              "updateOnChange": true
+            },
+            {
+              "attribut": "dataset_id",
+              "type": "combobox",
+              "label": "jeu de donnée",
+              "updateOnChange": true
+            },
+            {
+              "attribut": "rarete_region",
+              "type": "combobox",
+              "label": "Rareté région",
+              "updateOnChange": true
+            }
+          ]
+        }]
+    }
+  }
+}
+}
