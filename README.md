@@ -10,6 +10,19 @@ Liens utiles :
 * [Documentation](http://mviewerdoc.readthedocs.io/fr/stable/)
 * [Générateur d'applications](https://github.com/geobretagne/mviewerstudio/)
 
+-----------
+
+C'est un custom composant qui permet de faire une sélection d'éléments sur la page. Vous trouverez le composant dans le dossier `addons`. 
+
+Il s'appelle `MapFeatureSelector`.
+
+- `MapFeatureSelector.html` : Sert à l'interface.
+- `MapFeatureSelector.css` : Sert au design.
+- `MapFeatureSelector.js` : Sert à la logique javascript.
+
+Il utilise un custom layer assez lourd et donc charge le layer que quand le composant est ouvert.
+
+Le composant `MapFeatureSelector` permet de sélectionner des éléments géographiques sur une carte. Il crée une couche personnalisée pour les éléments sélectionnables, ajoute des interactions pour le dessin et la sélection des éléments, et permet de télécharger la sélection sous forme de fichier CSV. Le panneau de sélection peut être affiché/masqué et déplacé grâce à une interface interactive.
 
 Feuille de route
 -----------
